@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Navin_Importexportcategory extension
+ *                     NOTICE OF LICENSE
+ * 
+ *                     This source file is subject to the MIT License
+ *                     that is bundled with this package in the file LICENSE.txt.
+ *                     It is also available through the world-wide-web at this URL:
+ *                     http://opensource.org/licenses/mit-license.php
+ * 
+ *                     @category  Navin
+ *                     @package   Navin_Importexportcategory
+ *                     @copyright Copyright (c) 2016
+ *                     @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Navin\Importexportcategory\Block\Adminhtml\Exportcategory\Edit" name="navin_exportcategory_category_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Navin\Importexportcategory\Block\Adminhtml\Exportcategory\Edit\Tabs" name="navin_exportcategory_category_tabs">
+                <block class="Navin\Importexportcategory\Block\Adminhtml\Exportcategory\Edit\Tab\Exportcategory" name="navin_exportcategory_exportcategory_edit_tab"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">exportcategories</argument>
+                    <argument name="block" xsi:type="string">navin_exportcategory_exportcategory_edit_tab</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
